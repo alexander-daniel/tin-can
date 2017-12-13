@@ -1,8 +1,9 @@
 {
-  "name": "websocket",
+  "name": "tin-can",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "src/index.js",
   "license": "MIT",
+  "author": "alex vados",
   "dependencies": {
     "ecstatic": "^3.1.0",
     "hat": "^0.0.3",
