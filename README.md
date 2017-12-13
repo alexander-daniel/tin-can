@@ -66,7 +66,7 @@ client.connect('ws://localhost:8080').then(() => {
 
 ### usage with webpack
 **Note: if using `webpack`, make sure to shim out the `ws` module by adding it to your `externals`**
-```
+```js
 const path = require('path');
 
 module.exports = {
