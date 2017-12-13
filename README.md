@@ -1,5 +1,7 @@
 ## tin-can, a simple websocket server and client wrapper
 
+![tin-can](http://clipart-library.com/img/1411739.gif)
+
 tin-can is a simple wrapper around `'ws'`, exposing a simple API to get started on websocket apps quickly.
 Probably wouldn't use it for production.
 
