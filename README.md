@@ -8,7 +8,7 @@ Since the `'ws'` package does not support the browser, `tin-can` shims it and us
 ## usage
 ### server
 ```js
-const { Server } = require('../src');
+const { Server } = require('tin-can');
 const wsServer = new Server();
 wsServer.listen(8080);
 
@@ -28,7 +28,7 @@ wsServer.on('connection', (socket) => {
 
 ### client (with `aysnc/await`)
 ```js
-const WebSocketClient = require('../src').Client;
+const WebSocketClient = require('tin-can').Client;
 
 const client = new WebSocketClient();
 
@@ -51,7 +51,7 @@ main();
 
 ### client (with `Promises`)
 ```js
-const WebSocketClient = require('../src').Client;
+const WebSocketClient = require('tin-can').Client;
 
 const client = new WebSocketClient();
 client.connect('ws://localhost:8080').then(() => {
