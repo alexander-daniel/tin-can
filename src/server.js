@@ -6,14 +6,7 @@ class TinCanServer extends EventEmitter {
   constructor(opts) {
     super(opts);
     this.opts = opts;
-  }
-
-  listen(port = 8080) {
-    this.wss = new WebSocket.Server({
-      ...this.opts,
-      port
-    });
-
+    this.wss = new WebSocket.Server(opts);
     this.wss.on('connection', this.handleConnection.bind(this));
   }
 
