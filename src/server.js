@@ -4,6 +4,7 @@ const { EventEmitter } = require('events')
 class TinCanServer extends EventEmitter {
 
   constructor(opts) {
+    super(opts);
     this.opts = opts;
   }
 
