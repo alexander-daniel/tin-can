@@ -3,10 +3,17 @@ const { EventEmitter } = require('events')
 
 class TinCanServer extends EventEmitter {
 
+  constructor(opts) {
+    this.opts = opts;
+  }
+
   listen(port = 8080) {
-    const wss = new WebSocket.Server({ port });
-    this.wss = wss;
-    wss.on('connection', this.handleConnection.bind(this));
+    this.wss = new WebSocket.Server({
+      ...this.opts,
+      port
+    });
+
+    this.wss.on('connection', this.handleConnection.bind(this));
   }
 
   handleConnection(rawSocket) {
